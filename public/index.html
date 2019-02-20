@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Vue Countries</title>
+	<script src="./js/bundle.js"></script>
+</head>
+<body>
+
+	<h1>Energy Mix</h1>
+	<div id="app">
+
+			<!-- <label for="date-from">Date From:</label>
+			<input type="date" v-model=dateFrom>
+			<label for="time-from">Time From:</label>
+			<input type="time" v-model="timeFrom">
+
+
+			<label for="date-to">Date To:</label>
+			<input type="date" v-model=dateTo>
+			<label for="time-to">Time To:</label>
+			<input type="time" v-model="timeTo" v-on:change="getFormattedDate">
+
+			<button v-on:click="getGenMixByDateTime">Format Date</button> -->
+
+		<p>Time From: {{ timeStart }}</p>
+		<p>Time To: {{ timeEnd }}</p>
+		<li v-for="item in genMix">{{ item.fuel }} {{ item.perc }}%</li>
+
+		<GChart
+			v-if="genMixChart"
+			type="PieChart"
+			:data="genMixChart"
+		/>
+
+	</div>
+
+</body>
+</html>
